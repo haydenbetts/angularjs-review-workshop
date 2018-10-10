@@ -1,12 +1,12 @@
-angular.module('todo-list').component('todoList', {
+angular.module("todo-list").component("todoList", {
   bindings: {
-    todos: '<',
-    delete: '<'
+    todos: "<",
+    delete: "<"
   },
   template: `
         <div ng-repeat='todo in $ctrl.todos track by $index'>
-            <button ng-click='$ctrl.delete($index)'>Complete</button>
             {{todo}}
+            <button ng-click='$ctrl.delete($index)'>&#10004;</button>
         </div>
     `
 });
